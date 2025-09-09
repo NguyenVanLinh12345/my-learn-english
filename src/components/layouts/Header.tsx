@@ -1,10 +1,11 @@
+import Link from 'next/link'
 import React from 'react'
 
 export default function Header() {
     return (
         <header className="bg-white sticky top-0">
             <div className="mx-auto max-w-screen-xl h-16 flex items-center gap-8 px-4 sm:px-6 lg:px-8">
-                <a className="block text-teal-600" href="#">
+                <Link className="block text-teal-600" href="/">
                     <span className="sr-only">Home</span>
                     <svg className="h-8" viewBox="0 0 28 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -12,7 +13,7 @@ export default function Header() {
                             fill="currentColor"
                         />
                     </svg>
-                </a>
+                </Link>
 
                 <div className="flex flex-1 items-center justify-end md:justify-between">
                     <nav aria-label="Global" className="hidden md:block">
@@ -24,40 +25,24 @@ export default function Header() {
                             <li>
                                 <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Careers </a>
                             </li>
-
-                            <li>
-                                <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> History </a>
-                            </li>
-
-                            <li>
-                                <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Services </a>
-                            </li>
-
-                            <li>
-                                <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Projects </a>
-                            </li>
-
-                            <li>
-                                <a className="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a>
-                            </li>
                         </ul>
                     </nav>
 
                     <div className="flex items-center gap-4">
                         <div className="sm:flex sm:gap-4">
-                            <a
+                            <Link
                                 className="block rounded-md bg-teal-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-teal-700"
-                                href="#"
+                                href="/login"
                             >
                                 Login
-                            </a>
+                            </Link>
 
-                            <a
+                            <Link
                                 className="hidden rounded-md bg-gray-100 px-5 py-2.5 text-sm font-medium text-teal-600 transition hover:text-teal-600/75 sm:block"
-                                href="#"
+                                href="/register"
                             >
                                 Register
-                            </a>
+                            </Link>
                         </div>
 
                         <button

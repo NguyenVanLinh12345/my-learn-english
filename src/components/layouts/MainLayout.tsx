@@ -2,9 +2,10 @@ import React, { ReactNode } from 'react'
 import Header from './Header'
 import Footer from './Footer';
 
-type Props = {
+type Props = Readonly<{
     children: ReactNode;
-}
+}>
+
 export default function MainLayout({ children }: Props) {
     return (
         <>
@@ -14,5 +15,5 @@ export default function MainLayout({ children }: Props) {
             </div>
             <Footer />
         </>
-    )
+    );
 }
